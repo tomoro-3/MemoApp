@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
+import Icon from './Icon';
+
 export default function MemoList() {
   return (
     <View>
@@ -10,7 +12,7 @@ export default function MemoList() {
           <Text style={styles.memoListItemDate}>2023年12月24日 10:00</Text>
         </View>
         <View>
-          <Text>X</Text>
+          <Icon name="delete" size={24} color="#B0B0B0" />
         </View>
       </View>
 
@@ -20,7 +22,7 @@ export default function MemoList() {
           <Text style={styles.memoListItemDate}>2023年12月24日 10:00</Text>
         </View>
         <View>
-          <Text>X</Text>
+          <Icon name="delete" size={24} color="#B0B0B0" />
         </View>
       </View>
 
@@ -30,7 +32,7 @@ export default function MemoList() {
           <Text style={styles.memoListItemDate}>2023年12月24日 10:00</Text>
         </View>
         <View>
-          <Text>X</Text>
+          <Icon name="delete" size={24} color="#B0B0B0" />
         </View>
       </View>
 

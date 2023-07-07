@@ -1,24 +1,32 @@
-import Rreact from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { string, shape } from 'prop-types';
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import { string, shape, number } from 'prop-types';
+
+import Icon from './Icon';
 
 export default function CircleButton(props) {
-  const { children, style } = props;
+  const {
+    style, name, size, color,
+  } = props;
 
   return (
-    <View style={[styles.circleButton,style]}>
-      <Text style={styles.circleButtonLabel}>{children}</Text>
+    <View style={[styles.circleButton, style]}>
+      <Icon name={name} size={40} color="white" />
     </View>
   );
 }
 
 CircleButton.propTypes = {
-  children: string.isRequired,
   style: shape(),
+  name: string.isRequired,
+  size: number,
+  color: string,
 };
 
 CircleButton.defaultProps = {
   style: null,
+  size: 16,
+  color: '#000000',
 };
 
 const styles = StyleSheet.create({
@@ -34,7 +42,7 @@ const styles = StyleSheet.create({
     bottom: 40,
     // shadowプロパティはiosにしか対応していない。
     shadowColor: '#000000',
-    shadowOffset: {width: 0,height: 8},
+    shadowOffset: { width: 0, height: 8 },
     shadowOpacity: 0.25,
     shadowRadius: 8,
     // elevationプロパティ（高さ）はandroidにしか対応していない。
