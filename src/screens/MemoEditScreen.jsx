@@ -8,7 +8,7 @@ import CircleButton from '../components/CircleButton';
 
 export default function MemoEditScreen() {
   return (
-    <KeyboardAvoidingView style={styles.container} behavior="heighgt">
+    <KeyboardAvoidingView style={styles.container} behavior="height">
       <AppBar />
       <View style={styles.inputContainer}>
         <TextInput value="買い物リスト" multiline style={styles.input} />
